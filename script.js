@@ -1,9 +1,9 @@
 // ========== 数据定义 ==========
 const lipGlossary = [
-    { id: 1, term: "芭比粉", brand: "YSL", hex: "#FF69B4", plainExplanation: "高饱和度的亮粉色，荧光感强，俗称“死亡芭比粉”", skinToneHint: "白皮也易显黑，黄皮绝对慎选", manTranslation: "就是很亮很亮的粉红色，涂上像芭比娃娃，但现实中容易显土气，非冷白皮别碰。", lipstickExample: "YSL 方管52", colorFamily: "粉色系", tags: ["荧光", "冷调", "高饱和", "显黑"] },
-    { id: 2, term: "正红色", brand: "Dior", hex: "#C4252C", plainExplanation: "经典大红色，气场全开，不偏橘不偏蓝", skinToneHint: "几乎所有肤色都能驾驭，显白首选", manTranslation: "就是那种很正很浓的红，涂上像红毯明星，气场拉满。", lipstickExample: "Dior 999", colorFamily: "红色系", tags: ["经典", "显白", "不挑皮", "气场强"] },
-    { id: 3, term: "豆沙色", brand: "NARS", hex: "#A65D48", plainExplanation: "介于粉色与棕色之间，温柔知性，日常百搭", skinToneHint: "黄皮友好，素颜可用，不突兀", manTranslation: "像红豆沙一样的颜色，涂上很自然，不浓不淡，日常不出错。", lipstickExample: "NARS Dolce Vita", colorFamily: "粉色系", tags: ["温柔", "日常", "素颜友好", "黄皮友好"] },
-    { id: 4, term: "枫叶红", brand: "MAC", hex: "#B3413A", plainExplanation: "红棕色中带橘调，像秋天的枫叶，复古又显白", skinToneHint: "黄皮亲妈，显白一级棒", manTranslation: "红里透点橘，像秋天的叶子，涂上很显白，不挑人。", lipstickExample: "MAC Chili", colorFamily: "红色系", tags: ["橘棕", "复古", "显白", "秋冬"] },
+    { id: 1, term: "正红色", brand: "Dior", hex: "#C4252C", plainExplanation: "经典大红色，气场全开，不偏橘不偏蓝", skinToneHint: "几乎所有肤色都能驾驭，显白首选", manTranslation: "就是那种很正很浓的红，涂上像红毯明星，气场拉满。", lipstickExample: "Dior 999", colorFamily: "红色系", tags: ["经典", "显白", "不挑皮", "气场强"] },
+    { id: 2, term: "枫叶红", brand: "MAC", hex: "#B3413A", plainExplanation: "红棕色中带橘调，像秋天的枫叶，复古又显白", skinToneHint: "黄皮亲妈，显白一级棒", manTranslation: "红里透点橘，像秋天的叶子，涂上很显白，不挑人。", lipstickExample: "MAC Chili", colorFamily: "红色系", tags: ["橘棕", "复古", "显白", "秋冬"] },
+    { id: 3, term: "芭比粉", brand: "YSL", hex: "#FF69B4", plainExplanation: "高饱和度的亮粉色，荧光感强，俗称“死亡芭比粉”", skinToneHint: "白皮也易显黑，黄皮绝对慎选", manTranslation: "就是很亮很亮的粉红色，涂上像芭比娃娃，但现实中容易显土气，非冷白皮别碰。", lipstickExample: "YSL 方管52", colorFamily: "粉色系", tags: ["荧光", "冷调", "高饱和", "显黑"] },
+    { id: 4, term: "豆沙色", brand: "NARS", hex: "#A65D48", plainExplanation: "介于粉色与棕色之间，温柔知性，日常百搭", skinToneHint: "黄皮友好，素颜可用，不突兀", manTranslation: "像红豆沙一样的颜色，涂上很自然，不浓不淡，日常不出错。", lipstickExample: "NARS Dolce Vita", colorFamily: "粉色系", tags: ["温柔", "日常", "素颜友好", "黄皮友好"] },
     { id: 5, term: "烂番茄", brand: "Armani", hex: "#E85D2E", plainExplanation: "浓郁的橘红色，像熟透的番茄，显白又有活力", skinToneHint: "黄皮挚爱，显白不荧光", manTranslation: "橘红色，像番茄酱的颜色，涂上很亮眼，巨显白。", lipstickExample: "Armani 红管405", colorFamily: "橘色系", tags: ["橘红", "显白", "黄皮友好", "丝绒"] },
     { id: 6, term: "奶茶色", brand: "Bobbi Brown", hex: "#C9A690", plainExplanation: "温柔的裸调棕粉色，像奶茶一样柔和", skinToneHint: "不挑肤色，适合通勤淡妆", manTranslation: "就是奶茶那种颜色，涂上很温柔，低调有气质。", lipstickExample: "Bobbi Brown Claret", colorFamily: "棕色系", tags: ["裸粉", "温柔", "日常", "不挑皮"] },
     { id: 7, term: "梅子色", brand: "3CE", hex: "#8E4B6E", plainExplanation: "紫色调浆果色，冷艳气质，适合秋冬", skinToneHint: "白皮显气质，黄皮需带妆", manTranslation: "像梅子一样的紫红色，涂上很有气场，但黄皮不化妆容易显黑。", lipstickExample: "3CE Know Better", colorFamily: "紫色系", tags: ["紫调", "冷艳", "秋冬", "挑妆"] },
@@ -63,9 +63,9 @@ function renderCards() {
 
     if (isEmptyState()) {
         displayData = lipGlossary.slice(0, 4);
-        resultCountSpan.innerText = `${displayData.length} 条黑话 (示例)`;
+        resultCountSpan.innerText = `${displayData.length} 条结果 (示例)`;
     } else {
-        resultCountSpan.innerText = `${displayData.length} 条黑话`;
+        resultCountSpan.innerText = `${displayData.length} 条结果`;
     }
 
     if (displayData.length === 0) {
