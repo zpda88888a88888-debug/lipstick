@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>口红色号词典｜直男识色指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <div class="header">
+        <h1>📖 口红黑话词典</h1>
+        <div class="sub">直男友好｜秒懂色号术语</div>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 搜索颜色名称 (如“芭比粉”“枫叶红”)" autocomplete="off">
+    </div>
+
+    <div class="filter-section">
+        <div class="filter-header">
+            <div class="filter-title">🎨 按颜色分类筛选</div>
+            <button id="resetFilterBtn" class="reset-filter">重置筛选</button>
+        </div>
+        <div class="tag-group" id="tagFilterGroup"></div>
+    </div>
+
+    <div class="result-bar">
+        <span class="result-count" id="resultCount">0 条结果</span>
+        <button id="clearSearchBtn" class="clear-search" style="display: none;">清空搜索</button>
+    </div>
+
+    <div id="cardsContainer" class="cards-grid"></div>
+</div>
+
+<div id="detailModal" class="modal-mask">
+    <div class="modal-container">
+        <div id="modalColorBlock" class="modal-color" style="background-color: #ccc;"></div>
+        <div class="modal-content">
+            <div class="modal-term" id="modalTerm"></div>
+            <div class="modal-brand" id="modalBrand"></div>
+            <div class="modal-hex" id="modalHex"></div>
+            <div class="modal-explanation" id="modalExplanation"></div>
+            <div class="modal-skin-hint" id="modalSkinHint"></div>
+            <div class="modal-example" id="modalExample"></div>
+            <div class="man-translation" id="modalManTranslation">
+                <div class="label">🧔 直男翻译</div>
+                <div class="text" id="manTranslationText"></div>
+            </div>
+            <div class="modal-tags" id="modalTagsContainer"></div>
+            <button class="close-btn" id="closeModalBtn">关 闭</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
